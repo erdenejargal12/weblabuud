@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <img src="Screenshot (115).png" id="mushroom" style="width: 200px; height: 200px; position: absolute; left: 0; top: 0;">
+
+  <script>
+    var im = document.getElementById('mushroom');
+
+    window.addEventListener('load', () => {
+      im.style.position = 'absolute';
+      im.style.left = '0px';
+      im.style.top = '0px';
+    });
+
+    document.onkeydown = function(e) {
+      switch(e.key) {
+        case "a":
+          im.style.left = parseInt(im.style.left) - 50 + "px";
+          break;
+        case "d":
+          im.style.left = parseInt(im.style.left) + 50 + "px";
+          break;
+        case "w":
+          im.style.top = parseInt(im.style.top) - 50 + "px";
+          break;
+        case "s":
+          im.style.top = parseInt(im.style.top) + 50 + "px";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
